@@ -8,4 +8,6 @@
 
     <dimen name="wallpaper_divider_width">1dp</dimen>
 
+    <dimen name="wdj_ad_container_horizontal_margin">8dip</dimen>
+
     </resources>

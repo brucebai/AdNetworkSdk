@@ -1,7 +1,6 @@
 package com.wandoujia.adssdk.sample;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -16,26 +15,30 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.wandoujia.ads.sdk.AdListener;
 import com.wandoujia.ads.sdk.Ads;
 import com.wandoujia.ads.sdk.loader.Fetcher;
+import com.wandoujia.ads.sdk.widget.AdBanner;
 
 public class MainActivity extends Activity {
 
   private static final String TAG = "Ads-Sample";
 
-  private static final String ADS_APP_ID = "100001645";
-  private static final String ADS_SECRET_KEY = "0f1e731cde2c960bd403345ee73b7ef8";
+  private static final String ADS_APP_ID = "100010233";
+  private static final String ADS_SECRET_KEY = "6f1fa5e237fb4bf0212d398816b581bc";
 
-  private static final String TAG_LIST = "ec6e157d7bf91e974cc039234bcee955";
-  private static final String TAG_INTERSTITIAL_FULLSCREEN = "ec6e157d7bf91e974cc039234bcee955";
-  private static final String TAG_INTERSTITIAL_WIDGET = "ec6e157d7bf91e974cc039234bcee955";
+  private static final String TAG_LIST = "a5d122a5a0d4e68822eb74ba98be5d90";
+  private static final String TAG_INTERSTITIAL_FULLSCREEN = "61a56ba5cc2cae85905af9453e26c697";
+  private static final String TAG_INTERSTITIAL_WIDGET = "61a56ba5cc2cae85905af9453e26c697";
+  private static final String TAG_BANNER = "06361eb7a4d466d09c8a217cd83018b1";
   // private static final String TAG_INTERSTITIAL_FULLSCREEN = "Ads_show_in_fullScreen";
   // private static final String TAG_INTERSTITIAL_WIDGET = "Ads_show_as_widget";
 
   private Button showAppWallButton;
+
+  private AdBanner adBanner;
+  private View adBannerView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -137,6 +140,18 @@ public class MainActivity extends Activity {
     showBannerAd();
   }
 
+  @Override
+  protected void onStart() {
+    adBanner.startAutoScroll();
+    super.onStart();
+  }
+
+  @Override
+  protected void onStop() {
+    adBanner.stopAutoScroll();
+    super.onStop();
+  }
+
   private void drawUpdateIndicator(int color, boolean drawLeftOrRight) {
     ShapeDrawable smallerCircle = new ShapeDrawable(new OvalShape());
     smallerCircle.setIntrinsicHeight(60);
@@ -166,8 +181,13 @@ public class MainActivity extends Activity {
   }
 
   void showBannerAd() {
-    Ads.showBannerAd(this, (ViewGroup) findViewById(R.id.banner_ad_container),
-        "ec6e157d7bf91e974cc039234bcee955");
+    ViewGroup containerView = (ViewGroup) findViewById(R.id.banner_ad_container);
+    if (adBannerView != null && containerView.indexOfChild(adBannerView) >= 0) {
+      containerView.removeView(adBannerView);
+    }
+    adBanner = Ads.showBannerAd(this, (ViewGroup) findViewById(R.id.banner_ad_container),
+        TAG_BANNER);
+    adBannerView = adBanner.getView();
   }
 
 

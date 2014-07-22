@@ -5,8 +5,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#4D000000"
-                android:paddingLeft="8dip"
-                android:paddingRight="8dip"
+                android:paddingLeft="@dimen/wdj_ad_container_horizontal_margin"
+                android:paddingRight="@dimen/wdj_ad_container_horizontal_margin"
                 android:paddingTop="8dip"
                 android:paddingBottom="8dip">
 

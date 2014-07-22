@@ -4,6 +4,7 @@
                 android:id="@+id/wdj_ads_widget_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minWidth="300dip"
         android:background="@drawable/wdj_ads_card_background_normal">
 
     <RelativeLayout
