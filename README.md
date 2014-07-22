@@ -9,7 +9,7 @@ See our [Guide](http://developer.wandoujia.com/adnetwork/dev-docs/) to get start
 Change Log
 ===========
 
-**Version 4.1.0** - *July 17, 2014*
+**Version 1.4.0** - *July 17, 2014*
 * ConfirmDialog for Interstitial and Banner Ad.
 * Notification bar optimizing.
 * Auto-install & open and creating shortCut for downloaded Ad.
