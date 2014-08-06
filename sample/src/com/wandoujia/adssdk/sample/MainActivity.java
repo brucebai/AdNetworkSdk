@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
     final ViewGroup adsWidgetContainer = (ViewGroup) findViewById(R.id.ads_widget_container);
 
     final Fetcher.AdFormat adFormat = Fetcher.AdFormat.interstitial;
-    if (Ads.isLoaded(adFormat, TAG_LIST)) {
+    if (Ads.isLoaded(adFormat, TAG_INTERSTITIAL_WIDGET)) {
       showAppWidget(adsWidgetContainer);
     } else {
       adsWidgetContainer.setVisibility(View.GONE);
