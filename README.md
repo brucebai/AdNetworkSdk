@@ -8,6 +8,10 @@ See our [Guide](http://developer.wandoujia.com/adnetwork/dev-docs/) to get start
 
 Change Log
 ===========
+**Version 1.4.9** - *July 17, 2014*
+* Banner Ad bug-fix.
+* Range-download bug-fix.
+* Remove default frequency-cap in local config.
 
 **Version 1.4.0** - *July 17, 2014*
 * ConfirmDialog for Interstitial and Banner Ad.
