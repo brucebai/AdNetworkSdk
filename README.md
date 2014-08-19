@@ -9,6 +9,12 @@ See our [Guide](http://developer.wandoujia.com/adnetwork/dev-docs/) to get start
 Change Log
 ===========
 **版本 1.4.9** - *2014-7-17*
+* 优化插屏广告频次控制
+* 优化插屏广告详情页
+* 优化应用墙广告内容更新接口，提升应用墙广告的展示几率
+
+
+**版本 1.4.9** - *2014-7-17*
 * Banner广告增加启动关闭开关，避免后台运行的bug。
 * 修复断点续传的bug。
 * 移除本地默认的频次控制设置。
