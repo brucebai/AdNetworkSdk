@@ -8,7 +8,7 @@ See our [Guide](http://developer.wandoujia.com/adnetwork/dev-docs/) to get start
 
 Change Log
 ===========
-**版本 1.4.9** - *2014-7-17*
+**版本 1.5.0** - *2014-8-19*
 * 优化插屏广告频次控制
 * 优化插屏广告详情页
 * 优化应用墙广告内容更新接口，提升应用墙广告的展示几率
